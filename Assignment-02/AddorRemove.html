@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+<input type="text" name="" id="in">
+<button onclick="add()">add</button>
+<button id="dis">display</button>
+<p id="demo"></p>
+<script type="text/javascript">
+  var arr = []
+  var i=0;
+  function add(){
+    var item = document.getElementById('in').value;
+    arr[i]=item;
+    i++;
+    var disp = document.getElementById('dis');
+    document.getElementById('in').innerText = "";
+    disp.addEventListener("click", function(){
+      while(i>0){
+      var para = document.createElement("p");
+      var node = document.createTextNode("Element "+i+" = "+item);
+      para.appendChild(node);
+      document.getElementById('demo').appendChild(para); 
+      i--;
+      }
+    });
+  }
+</script>
+</body>
+</html>

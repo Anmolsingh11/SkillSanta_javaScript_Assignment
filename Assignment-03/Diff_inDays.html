@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Learning</title>
+</head>
+<body>
+ <script type="text/javascript">
+  var date_diff_indays = function(a,b) {
+    // body...
+    d1 = new Date(a);
+    d2 = new Date(b);
+    var timeDiff = Math.abs(d2-d1); //calculating the time difference between given dates
+    var daysDiff = Math.ceil(timeDiff/(1000*60*30*48)); //converting the time into days
+    return daysDiff+" Days";
+  }
+  console.log(date_diff_indays('04/03/2014', '05/03/2014'));
+</script>
+</body>
+</html>

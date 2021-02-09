@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Learning</title>
+</head>
+<body>
+ <script type="text/javascript">
+   function lcm_two_numbers(a,b){
+
+    let lcm = (a > b) ? a : b;
+    while(true) {
+      if (lcm % a == 0 && lcm % b == 0) {
+        break;
+    }
+    lcm++;
+   }
+   return lcm;
+ }
+   console.log(lcm_two_numbers(10,15));
+
+ </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+<script type="text/javascript">
+  //orignal dob
+  var dob = new Date("04/30/1998");
+  //calculating the month diffrence between current date and dob
+  var month = Date.now() - dob.getTime();
+  //converting it to a date
+  var month_as_date = new Date(month);
+  //taking the year from the converted date
+  var year = month_as_date.getUTCFullYear();
+  //now calculating the age.
+  var age = Math.abs(year - 1970);
+
+  console.log(age);
+</script>
+</body>
+</html>

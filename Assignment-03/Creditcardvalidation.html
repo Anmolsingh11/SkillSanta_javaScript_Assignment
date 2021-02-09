@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Learning</title>
+</head>
+<body>
+ <script type="text/javascript">
+  
+ function validateCreditCard(a) {
+  var s= Array.from(a);
+  const allEqual = arr => arr.every( v => v == arr[0] )
+  if(allEqual(s)){
+    return false;
+  }else{
+    var sum = 0;
+  if(a[a.length-1]%2 != 0){
+    return false;
+  }
+  for (var i = 0; i <a.length-1; i++) {
+    if(isNaN(a[i])){
+      break;
+    }
+
+      sum+= parseInt(a[i]);
+  }
+  
+  if(sum>=16){
+    return true;
+  }else{
+    return false;
+  }
+
+  }
+
+   
+ }
+</script>
+</body>
+</html>
